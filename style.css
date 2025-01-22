@@ -428,7 +428,13 @@ footer {
       display: none;  
     }
     
-    
+    .logo h1{
+      display: none;
+    }
+    .logo img{
+      width: 60px;
+      height: 60px;
+    }
   
   }
   @media (max-width: 768px) {
