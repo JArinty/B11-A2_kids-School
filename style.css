@@ -417,7 +417,24 @@ footer {
 .icons {
   color: white;
 }
+.marquee-container {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 20px;
+}
 
+.marquee {
+  animation: scroll-left 10s linear infinite;
+}
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 @media (max-width: 768px) {
 
@@ -566,23 +583,20 @@ footer {
         justify-content: flex-start;
         gap: 20px;
       }
+      .marquee-container {
+        flex-grow: 1;
+    overflow: hidden;
+    white-space:wrap;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+
+      }
+  
+      .marquee {
+        font-size: 14px; 
+        white-space: wrap;
+      }
   }
   
-  .marquee-container {
-    flex-grow: 1;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-left: 20px;
-  }
-
-  .marquee {
-    animation: scroll-left 10s linear infinite;
-  }
-  @keyframes scroll-left {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
+  
